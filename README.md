@@ -26,7 +26,7 @@
  
 - HTML
 - CSS
-- Javascript
+- JavaScript
 - Jquery
 - Bootstrap
 
