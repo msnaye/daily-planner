@@ -19,3 +19,20 @@ $(".description").each(function(){
         $(this).addClass("past")
     }
 })
+
+$(".saveBtn").on("click", function(){
+    //console.log("button clicked")
+    var timeKey = $(this).siblings("textArea").attr("id")
+    var userInput = $(this).siblings("textArea").val()
+    localStorage.setItem(timeKey, userInput)
+})
+
+function getItem (){
+    for(var i=0;i<localStorage.length; i++){
+        var timeKey=localStorage.key(i)
+        var userInput=localStorage.getItem(timeKey)
+        //console.log(userInput)
+        $("#"+timeKey).val(userInput)
+    }
+}
+getItem()
